@@ -8,19 +8,18 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class RotateArrayTest {
+class MoveZeroesTest {
     @ParameterizedTest
     @MethodSource(value = "generateSource")
-    void test(int[] nums, int k, int[] result) {
-        new RotateArray().rotate(nums, k);
+    void test(int[] nums, int[] result) {
+        new MoveZeroes().moveZeroes(nums);
         assertArrayEquals(result, nums);
     }
 
     private static Stream<Arguments> generateSource() {
         return Stream.of(
-                Arguments.of(new int[]{1, 2}, 1, new int[]{2, 1}),
-                Arguments.of(new int[]{1, 2}, 3, new int[]{2, 1}),
-                Arguments.of(new int[]{1}, 0, new int[]{1}),
-                Arguments.of(new int[]{1, 2, 3, 4, 5, 6, 7}, 3, new int[]{5, 6, 7, 1, 2, 3, 4}));
+                Arguments.of(new int[]{1,}, new int[]{1}),
+                Arguments.of(new int[]{1, 3, 0, 0, 12}, new int[]{1, 3, 12, 0, 0}),
+                Arguments.of(new int[]{0, 1, 0, 3, 12}, new int[]{1, 3, 12, 0, 0}));
     }
 }
