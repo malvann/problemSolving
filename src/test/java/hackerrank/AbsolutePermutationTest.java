@@ -18,7 +18,7 @@ class AbsolutePermutationTest {
 
     private static Stream<Arguments> generateSource() {
         return Stream.of(
-//                Arguments.of(10, 0, List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)),
+                Arguments.of(10, 0, List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)),
                 Arguments.of(10, 1, List.of(2, 1, 4, 3, 6, 5, 8, 7, 10, 9)),
                 Arguments.of(7, 0, List.of(1, 2, 3, 4, 5, 6, 7)),
                 Arguments.of(10, 9, List.of(-1)),
@@ -44,5 +44,4 @@ class AbsolutePermutationTest {
                 Arguments.of(3, 0, List.of(1, 2, 3)),
                 Arguments.of(3, 2, List.of(-1)));
     }
-
 }
