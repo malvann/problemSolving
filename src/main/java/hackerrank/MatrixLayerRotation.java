@@ -39,7 +39,6 @@ public class MatrixLayerRotation {
     }
 
     private void iteration(Position start, int delta) {
-        //0-0, 0-2, 1-3, 3-3, 3-1, 2-0, 0-0,
         Position current = next(start, delta);
 
         int buff;
