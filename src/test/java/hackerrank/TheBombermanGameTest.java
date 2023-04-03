@@ -20,8 +20,8 @@ class TheBombermanGameTest {
     private static Stream<Arguments> generateSource() {
         return Stream.of(
                 Arguments.of(199,
-                        readAllFileByUrl("https://hr-testcases-us-east-1.s3.amazonaws.com/22193/input09.txt?AWSAccessKeyId=AKIAR6O7GJNX5DNFO3PV&Expires=1679260627&Signature=6kiA3y0IruLMgtWxv0Mb1KM7erk%3D&response-content-type=text%2Fplain"),
-                        readAllFileByUrl("https://hr-testcases-us-east-1.s3.amazonaws.com/22193/output09.txt?AWSAccessKeyId=AKIAR6O7GJNX5DNFO3PV&Expires=1679260640&Signature=%2FXoynj61AOGhgLh81NRALfKbcz4%3D&response-content-type=text%2Fplain")),
+                        readAllFileByUrl("https://hr-testcases-us-east-1.s3.amazonaws.com/22193/input09.txt?AWSAccessKeyId=AKIAR6O7GJNX5DNFO3PV&Expires=1679260627&Signature=6kiA3y0IruLMgtWxv0Mb1KM7erk%3D&response-content-type=text%2Fplain", 1),
+                        readAllFileByUrl("https://hr-testcases-us-east-1.s3.amazonaws.com/22193/output09.txt?AWSAccessKeyId=AKIAR6O7GJNX5DNFO3PV&Expires=1679260640&Signature=%2FXoynj61AOGhgLh81NRALfKbcz4%3D&response-content-type=text%2Fplain", 1)),
                 Arguments.of(3,
                         List.of(
                                 ".......",
