@@ -2,16 +2,16 @@ package leetcode;
 
 public class MaxAreaOfIsland {
     private int[][] grid;
-    private int maxArea;
     private int currentArea;
 
     public int maxAreaOfIsland(int[][] grid) {
         this.grid = grid;
+        int maxArea = 0;
 
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 check(i, j);
-                if (currentArea != 0){
+                if (currentArea != 0) {
                     maxArea = Math.max(maxArea, currentArea);
                     currentArea = 0;
                 }
@@ -20,8 +20,8 @@ public class MaxAreaOfIsland {
         return maxArea;
     }
 
-    private boolean check(int i, int j) {
-        if (j < 0 || j >= grid[0].length || i < 0 || i >= grid.length) return false;
+    private void check(int i, int j) {
+        if (j < 0 || j >= grid[0].length || i < 0 || i >= grid.length) return;
         if (this.grid[i][j] == 1) {
             currentArea++;
             grid[i][j] = 0;
@@ -31,6 +31,5 @@ public class MaxAreaOfIsland {
             check(i, j - 1);
             check(i - 1, j);
         }
-        return false;
     }
 }
