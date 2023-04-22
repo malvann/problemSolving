@@ -3,7 +3,7 @@ package leetcode;
 public class SortArrayByParity {
 
     public int[] sortArrayByParity(int[] nums) {
-        if (nums == null) return null;
+        if (nums == null) return new int[0];
 
         int index = nums.length - 1;
         for (int i = 0; i < index; i++) {
