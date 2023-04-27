@@ -4,12 +4,11 @@ import java.util.Arrays;
 
 public class SquaresOfASortedArray {
     public int[] sortedSquares(int[] nums) {
-//        return IntStream.of(nums).map(num -> num * num).sorted().toArray();
-        int[] res = new int[nums.length];
+//        return IntStream.of(nums).parallel().map(num -> num * num).sorted().toArray();
         for (int i = 0; i < nums.length; i++) {
-            res[i] = nums[i] * nums[i];
+            nums[i] = nums[i] * nums[i];
         }
-        Arrays.sort(res);
-        return res;
+        Arrays.sort(nums);
+        return nums;
     }
 }
