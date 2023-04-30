@@ -8,7 +8,7 @@ public class ClimbingStairs {
         int prev2 = 1;
 
         for (int i = 2; i <= n; ++i) {
-            final int dp = prev1 + prev2;
+            int dp = prev1 + prev2;
             prev2 = prev1;
             prev1 = dp;
         }
