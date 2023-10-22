@@ -14,7 +14,6 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class InsertionSortPart2Test {
-    private final PrintStream out = System.out;
     private final ByteArrayOutputStream buff = new ByteArrayOutputStream();
 
     @BeforeEach
