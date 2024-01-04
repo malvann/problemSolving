@@ -1,7 +1,6 @@
 package hackerrank;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class VowelSubstring {
     private static final String NO = "Not found!";
