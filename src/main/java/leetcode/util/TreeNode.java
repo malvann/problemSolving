@@ -6,7 +6,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-//@EqualsAndHashCode
+@EqualsAndHashCode
 @ToString
 public class TreeNode {
     public int val;
