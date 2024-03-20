@@ -1,5 +1,8 @@
 package leetcode.util;
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
 public class ListNode {
     public int val;
     public ListNode next;
