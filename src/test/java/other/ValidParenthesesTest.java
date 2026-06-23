@@ -13,5 +13,4 @@ class ValidParenthesesTest {
         assertTrue(target.isValid("([{}])"));
         assertFalse(target.isValid("("));
     }
-
 }
